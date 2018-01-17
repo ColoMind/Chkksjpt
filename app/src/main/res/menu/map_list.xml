@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group>
+        <item
+            android:id="@+id/draw_start"
+            android:orderInCategory="1"
+            android:title="绘制图斑"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/submit_graphic"
+            android:orderInCategory="2"
+            android:title="查看面积"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_setting"
+            android:orderInCategory="3"
+            android:title="设置"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/delete_feature"
+            android:orderInCategory="4"
+            android:title="删除选中要素"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/clear_graphic"
+            android:orderInCategory="5"
+            android:title="清除"
+            app:showAsAction="never" />
+
+    </group>
+
+
+</menu>

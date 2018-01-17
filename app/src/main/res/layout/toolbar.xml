@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    style="@style/base_toolbar">
+
+    <TextView
+        android:id="@+id/curr_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="serif"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_choose_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginEnd="@dimen/padding_left"
+        android:layout_marginRight="@dimen/padding_left"
+        android:text="选择地图"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/layout_edit_graphic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/edit_polygon_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_left"
+            android:layout_marginRight="@dimen/padding_left"
+            android:text="完成"
+            android:textSize="18sp" />
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>
+

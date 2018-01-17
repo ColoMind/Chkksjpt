@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.esri.android.map.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/layout_show_acreage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/blue_300"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_left"
+        android:paddingEnd="@dimen/padding_left"
+        android:paddingLeft="@dimen/padding_left"
+        android:paddingRight="@dimen/padding_left"
+        android:paddingStart="@dimen/padding_left">
+
+        <TextView
+            android:id="@+id/checkout_acreage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_toLeftOf="@id/checkout_coordinate"
+            android:layout_toStartOf="@id/checkout_coordinate"
+            android:text="@string/checkout_acreage"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/checkout_coordinate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/checkout_coordinate"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/upload_polygon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@id/checkout_coordinate"
+            android:layout_toRightOf="@id/checkout_coordinate"
+            android:text="@string/upload_polygon"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,391 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView_showMessages"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <include layout="@layout/map_header_layout" />
+
+            <Button
+                android:id="@+id/btn_ditu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="地图 >"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TableLayout
+            android:id="@+id/GridView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:padding="5dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="center"
+                        android:text="@string/land_parcel_coordinate"
+                        android:textColor="#ff000000"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_show_coordinate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="left"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="50dp"
+                        android:paddingRight="50dp"
+                        android:paddingTop="2dp"
+                        android:scrollbars="vertical"
+                        android:singleLine="false"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="85dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@string/land_parcel_identifier"
+                        android:textColor="#ff000000"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/Textview_dkbh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="85dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@string/land_parcel_acreage"
+                        android:textColor="#ff000000"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/Textview_mj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="85dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@string/district_owned"
+                        android:textColor="#ff000000"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/EditText_suxq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="85dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@string/project_to_selected"
+                        android:textColor="#ff000000"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/Edittext_nxxm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="85dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@string/village_owned"
+                        android:textColor="#ff000000"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/Textview_ssc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="85dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@string/township_owned"
+                        android:textColor="#ff000000"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/Textview_ssz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="85dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@string/decision_time"
+                        android:textColor="#ff000000"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/Textveiw_jcsj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|left"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:scrollbars="none">
+
+                        <TableLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical">
+
+                            <TableRow
+                                android:id="@+id/row"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </TableLayout>
+                    </HorizontalScrollView>
+
+                    <Button
+                        android:id="@+id/btn_take_photo"
+                        android:layout_width="85dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="@string/the_picture"
+                        android:textColor="#ff000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_save_patch"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/save_patch"
+                    android:textColor="#ff000000"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btn_ocu_analyse"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/occupy_analyse"
+                    android:textColor="#ff000000"
+                    android:textSize="18sp" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/choose_button1"
+            android:layout_width="256dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="100dp"
+            android:background="@color/light_blue_300"
+            android:gravity="center"
+            android:text="@string/page_expedition"
+            android:textSize="32sp" />
+
+        <Button
+            android:id="@+id/choose_button2"
+            android:layout_width="256dp"
+            android:layout_height="64dp"
+            android:background="@color/light_blue_300"
+            android:gravity="center"
+            android:text="@string/page_data_review"
+            android:textSize="32sp" />
+    </LinearLayout>
+</FrameLayout>
